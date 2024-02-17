@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pegasus Travels</title>
+    <link rel="shortcut icon" href="images/bus-icon.png" type="image/x-icon">
 
     <!-- DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -17,9 +18,9 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                        'hockey-red': '#FF4240',
-                        'hockey-black': '#131318',
-                        'hockey-gray': '#FFFFFF99',
+                        'p-green': '#1DD100',
+                        'p-black': '#030712',
+                        'p-gray': '#03071299',
                     }
                 }
             }
@@ -40,14 +41,52 @@
         <section id="navigation">
 
         </section>
-
-        <!-- Banner Section -->
-        <section id="banner">
-
-        </section>
     </header>
 
-    <main>
+    <!-- Main Section Start -->
+    <main class="mx-auto">
+        <!-- Banner Section -->
+        <section id="banner" class="mx-8 lg:mx-32 lg:mt-8 mt-4">
+            <div class="max-w-[1170px] w-full mx-auto font-raleway relative">
+                <!-- Texts inside the Banner -->
+                <div class="w-[75%] text-center text-white absolute lg:top-16 top-4 left-1/2 right-1/2 -translate-x-1/2">
+                    <h1 class="lg:text-7xl text-xl font-extrabold lg:leading-[86px] ">End-to-End Travel with
+                        <br>
+                        <span class="text-p-green">Pegasus Travels</span>
+                    </h1>
+                    <p class="lg:mt-4 mt-2 text-xs lg:text-lg">Travel with Pegasus Travels and feel the thrill and comfort.</p>
+                    <button onclick="jumpToReference()"
+                        class="btn lg:mt-8 mt-4 text-p-black font-bold bg-p-green border-2 border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Buy
+                        Tickets</button>
+                </div>
+                <img src="images/banner.png" alt="Banner" class="w-full">
+                <!-- cards -->
+                <div class="mx-auto w-[84%] font-inter flex flex-col md:flex-row gap-6 lg:absolute lg:bottom-[-72px] lg:left-1/2 lg:right-1/2 lg:-translate-x-1/2">
+                    <div class="w-[320px] h-36 bg-white rounded-3xl border-b-4 border-p-green flex justify-center items-center gap-4">
+                        <div class=""><img src="images/people.png" alt="People"></div>
+                        <div class="">
+                            <h3 class="font-bold text-3xl text-p-black">500K+</h3>
+                            <p class="text-p-gray">Registered Users</p>
+                        </div>
+                    </div>
+                    <div class="w-[320px] bg-white rounded-3xl border-b-4 border-p-green h-36 flex justify-center items-center gap-4">
+                        <div class=""><img src="images/ticket-cupon.png" alt="Ticket"></div>
+                        <div class="">
+                            <h3 class="font-bold text-3xl text-p-black">1.7M+</h3>
+                            <p class="text-p-gray">Tickets sold</p>
+                        </div>
+                    </div>
+                    <div class="w-[320px] bg-white rounded-3xl border-b-4 border-p-green h-36 flex justify-center items-center gap-4">
+                        <div class=""><img src="images/stoppage.png" alt="Rental Partners"></div>
+                        <div class="">
+                            <h3 class="font-bold text-3xl text-p-black">80K+</h3>
+                            <p class="text-p-gray">Rental Partners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Best Offers Section -->
         <section id="best-offers">
 
@@ -55,7 +94,6 @@
 
         <!-- Booking Section -->
         <section id="booking-section">
-
         </section>
     </main>
 
