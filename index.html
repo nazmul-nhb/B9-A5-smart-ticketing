@@ -168,12 +168,12 @@
                                 <p class="text-p-gray">Route</p>
                                 <p class="text-p-black">Dhaka-Sylhet</p>
                             </div>
-                            <hr class="border-dashed border-[1px] my-6">
+                            <hr class="border-dashed border my-6">
                             <div class="flex justify-between items-center text-lg font-semibold">
                                 <p class="text-p-gray">Departure Time</p>
                                 <p class="text-p-black">9:00PM</p>
                             </div>
-                            <hr class="border-dashed border-[1px] my-6">
+                            <hr class="border-dashed border my-6">
                             <div class="flex justify-between flex-1 gap-6 text-base text-[#030712CC]">
                                 <button class="btn p-4">Boarding Point - Laxmipur</button>
                                 <button class="btn p-4">Dropping Point - Bogura</button>
@@ -192,7 +192,7 @@
                 <div class="w-[84%] bg-white rounded-3xl flex flex-1 justify-between gap-0 mx-auto mt-12 py-8">
                     <div class="lg:w-3/5 p-8">
                         <h3 class="text-2xl text-p-black font-semibold">Select Your Seat</h3>
-                        <hr class="border-dashed border-[1px] my-6">
+                        <hr class="border-dashed border my-6">
                         <div class="font-inter flex justify-between items-center text-lg font-medium">
                             <div class="flex items-center gap-3"><img src="images/seat-gray.png" alt="Seat">
                                 <p class="text-p-gray">Available</p>
@@ -201,71 +201,126 @@
                                 <p class="text-p-green">Selected</p>
                             </div>
                         </div>
-                        <hr class="border-dashed border-[1px] my-6">
-                        <div class="flex justify-between mb-6">
-                            
-                        </div>
+                        <hr class="border-dashed border my-6">
                         <!-- Seat Grid -->
-                        <div class="font-inter grid grid-cols-9 gap-6 items-center">
+                        <div class="text-[#03071280] font-inter grid grid-cols-9 gap-6 items-center">
                             <div></div>
                             <div class="col-span-2"></div>
                             <div class="col-span-2"></div>
                             <div class="col-span-2"></div>
-                            <div class="btn bg-[#0307121A] text-center col-span-2" disabled><img src="images/wheel.png" alt="Steering"></div>
+                            <div class="btn bg-[#0307121A] rounded-xl text-center col-span-2" disabled><img
+                                    src="images/wheel.png" alt="Steering"></div>
                             <div>A</div>
-                            <button id="a1" class="btn col-span-2">A1</button>
-                            <button id="a2" class="btn col-span-2">A2</button>
-                            <button id="a3" class="btn col-span-2">A3</button>
-                            <button id="a4" class="btn col-span-2">A4</button>
+                            <button id="a1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">A1</button>
+                            <button id="a2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">A2</button>
+                            <button id="a3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">A3</button>
+                            <button id="a4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">A4</button>
                             <div>B</div>
-                            <button id="b1" class="btn col-span-2">B1</button>
-                            <button id="b2" class="btn col-span-2">B2</button>
-                            <button id="b3" class="btn col-span-2">B3</button>
-                            <button id="b4" class="btn col-span-2">B4</button>
+                            <button id="b1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">B1</button>
+                            <button id="b2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">B2</button>
+                            <button id="b3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">B3</button>
+                            <button id="b4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">B4</button>
                             <div>C</div>
-                            <button id="c1" class="btn col-span-2">C1</button>
-                            <button id="c2" class="btn col-span-2">C2</button>
-                            <button id="c3" class="btn col-span-2">C3</button>
-                            <button id="c4" class="btn col-span-2">C4</button>
+                            <button id="c1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">C1</button>
+                            <button id="c2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">C2</button>
+                            <button id="c3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">C3</button>
+                            <button id="c4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">C4</button>
                             <div>D</div>
-                            <button id="d1" class="btn col-span-2">D1</button>
-                            <button id="d2" class="btn col-span-2">D2</button>
-                            <button id="d3" class="btn col-span-2">D3</button>
-                            <button id="d4" class="btn col-span-2">D4</button>
+                            <button id="d1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">D1</button>
+                            <button id="d2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">D2</button>
+                            <button id="d3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">D3</button>
+                            <button id="d4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">D4</button>
                             <div>E</div>
-                            <button id="e1" class="btn col-span-2">E1</button>
-                            <button id="e2" class="btn col-span-2">E2</button>
-                            <button id="e3" class="btn col-span-2">E3</button>
-                            <button id="e4" class="btn col-span-2">E4</button>
+                            <button id="e1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">E1</button>
+                            <button id="e2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">E2</button>
+                            <button id="e3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">E3</button>
+                            <button id="e4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">E4</button>
                             <div>F</div>
-                            <button id="f1" class="btn col-span-2">F1</button>
-                            <button id="f2" class="btn col-span-2">F2</button>
-                            <button id="f3" class="btn col-span-2">F3</button>
-                            <button id="f4" class="btn col-span-2">F4</button>
+                            <button id="f1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">F1</button>
+                            <button id="f2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">F2</button>
+                            <button id="f3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">F3</button>
+                            <button id="f4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">F4</button>
                             <div>G</div>
-                            <button id="g1" class="btn col-span-2">G1</button>
-                            <button id="g2" class="btn col-span-2">G2</button>
-                            <button id="g3" class="btn col-span-2">G3</button>
-                            <button id="g4" class="btn col-span-2">G4</button>
+                            <button id="g1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">G1</button>
+                            <button id="g2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">G2</button>
+                            <button id="g3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">G3</button>
+                            <button id="g4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">G4</button>
                             <div>H</div>
-                            <button id="h1" class="btn col-span-2">H1</button>
-                            <button id="h2" class="btn col-span-2">H2</button>
-                            <button id="h3" class="btn col-span-2">H3</button>
-                            <button id="h4" class="btn col-span-2">H4</button>
+                            <button id="h1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">H1</button>
+                            <button id="h2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">H2</button>
+                            <button id="h3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">H3</button>
+                            <button id="h4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">H4</button>
                             <div>I</div>
-                            <button id="i1" class="btn col-span-2">I1</button>
-                            <button id="i2" class="btn col-span-2">I2</button>
-                            <button id="i3" class="btn col-span-2">I3</button>
-                            <button id="i4" class="btn col-span-2">I4</button>
+                            <button id="i1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">I1</button>
+                            <button id="i2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">I2</button>
+                            <button id="i3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">I3</button>
+                            <button id="i4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">I4</button>
                             <div>J</div>
-                            <button id="j1" class="btn col-span-2">J1</button>
-                            <button id="j2" class="btn col-span-2">J2</button>
-                            <button id="j3" class="btn col-span-2">J3</button>
-                            <button id="j4" class="btn col-span-2">J4</button>
+                            <button id="j1"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">J1</button>
+                            <button id="j2"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">J2</button>
+                            <button id="j3"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">J3</button>
+                            <button id="j4"
+                                class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">J4</button>
                         </div>
                     </div>
                     <div class="lg:w-2/5 border-l border-p-gray border-dashed p-8">
                         <h3 class="text-2xl text-p-black font-semibold">Select Your Seat</h3>
+                        <hr class="border-dashed border my-6">
+                        <table class="table font-inter">
+                            <thead class="text-p-black font-medium border-b border-dashed">
+                                <tr class="border-0">
+                                    <th>Seat <span id="booked-seats" class="bg-p-green text-white w-6 px-2 py-0 rounded-md">0</span></th>
+                                    <th>Class</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="seat-booked" class="text-[#03071299] text-base font-normal">
+                                <tr class="border-0">
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
