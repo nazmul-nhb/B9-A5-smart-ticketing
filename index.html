@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="styles/ticket.css">
 </head>
 
-<body>
+<body class="font-raleway">
     <!-- Header Section -->
     <header>
         <!-- Navigation Bar -->
@@ -47,36 +47,44 @@
     <main class="mx-auto">
         <!-- Banner Section -->
         <section id="banner" class="mx-8 lg:mx-32 lg:mt-8 mt-4">
-            <div class="max-w-[1170px] w-full mx-auto font-raleway relative">
+            <div class="max-w-[1170px] w-full mx-auto relative">
                 <!-- Texts inside the Banner -->
-                <div class="w-[75%] text-center text-white absolute lg:top-16 top-4 left-1/2 right-1/2 -translate-x-1/2">
+                <div
+                    class="w-[75%] text-center text-white absolute lg:top-16 top-4 left-1/2 right-1/2 -translate-x-1/2">
                     <h1 class="lg:text-7xl text-xl font-extrabold lg:leading-[86px] ">End-to-End Travel with
                         <br>
                         <span class="text-p-green">Pegasus Travels</span>
                     </h1>
-                    <p class="lg:mt-4 mt-2 text-xs lg:text-lg">Travel with Pegasus Travels and feel the thrill and comfort.</p>
+                    <p class="lg:mt-4 mt-2 text-xs lg:text-lg">Travel with Pegasus Travels and feel the thrill and
+                        comfort.</p>
                     <button onclick="jumpToReference()"
-                        class="btn lg:mt-8 mt-4 text-p-black font-bold bg-p-green border-2 border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Buy
+                        class="btn rounded-xl lg:mt-8 mt-4 text-p-black font-bold bg-p-green border-2 border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Buy
                         Tickets</button>
                 </div>
-                <img src="images/banner.png" alt="Banner" class="w-full">
+                <div class="">
+                    <img src="images/banner.png" alt="Banner" class="w-full">
+                </div>
                 <!-- cards -->
-                <div class="mx-auto w-[84%] font-inter flex flex-col md:flex-row gap-6 lg:absolute lg:bottom-[-72px] lg:left-1/2 lg:right-1/2 lg:-translate-x-1/2">
-                    <div class="w-[320px] h-36 bg-white rounded-3xl border-b-4 border-p-green flex justify-center items-center gap-4">
+                <div
+                    class="mx-auto w-[84%] font-inter flex flex-col md:flex-row gap-6 lg:absolute lg:bottom-[-72px] lg:left-1/2 lg:right-1/2 lg:-translate-x-1/2">
+                    <div
+                        class="w-[320px] h-36 bg-white rounded-3xl border-b-4 border-p-green flex justify-center items-center gap-4">
                         <div class=""><img src="images/people.png" alt="People"></div>
                         <div class="">
                             <h3 class="font-bold text-3xl text-p-black">500K+</h3>
                             <p class="text-p-gray">Registered Users</p>
                         </div>
                     </div>
-                    <div class="w-[320px] bg-white rounded-3xl border-b-4 border-p-green h-36 flex justify-center items-center gap-4">
+                    <div
+                        class="w-[320px] bg-white rounded-3xl border-b-4 border-p-green h-36 flex justify-center items-center gap-4">
                         <div class=""><img src="images/ticket-cupon.png" alt="Ticket"></div>
                         <div class="">
                             <h3 class="font-bold text-3xl text-p-black">1.7M+</h3>
                             <p class="text-p-gray">Tickets sold</p>
                         </div>
                     </div>
-                    <div class="w-[320px] bg-white rounded-3xl border-b-4 border-p-green h-36 flex justify-center items-center gap-4">
+                    <div
+                        class="w-[320px] bg-white rounded-3xl border-b-4 border-p-green h-36 flex justify-center items-center gap-4">
                         <div class=""><img src="images/stoppage.png" alt="Rental Partners"></div>
                         <div class="">
                             <h3 class="font-bold text-3xl text-p-black">80K+</h3>
@@ -88,12 +96,47 @@
         </section>
 
         <!-- Best Offers Section -->
-        <section id="best-offers">
-
+        <section id="best-offers" class="mx-8 lg:mx-32 lg:mt-48 mt-16">
+            <h1 class="text-5xl font-bold text-center">Best offers for you</h1>
+            <!-- Tickets -->
+            <div class="flex lg:flex-row flex-col flex-1 gap-6 lg:mt-12 mt-5 lg:mb-12">
+                <!-- 15% OFF -->
+                <div class="bg-[#FFBF0F] flex h-[220px] rounded-3xl items-center gap-0 relative">
+                    <div class="font-inter w-[400px] pl-12">
+                        <h1 class="text-[#030712CC] font-black text-4xl">15% OFF</h1>
+                        <h3 class="text-[#030712CC] font-semibold text-xl">on your next purchase</h3>
+                        <p class="text-[#03071280] font-medium text-lg">use by March 2024</p>
+                    </div>
+                    <div class="absolute left-[376px]">
+                        <img src="images/cupon-divider.png" alt="Divider">
+                    </div>
+                    <div class="w-[180px] text-center">
+                        <h2 class="text-[#030712CC] font-bold text-3xl">NEW15</h2>
+                        <p class="text-[#03071280] font-medium text-xl">Coupon Code</p>
+                    </div>
+                </div>
+                <!-- 20% OFF -->
+                <div class="bg-[#F78C9C] flex h-[220px] rounded-3xl items-center gap-0 relative">
+                    <div class="font-inter w-[400px] pl-12">
+                        <h1 class="text-[#030712CC] font-black text-4xl">20% OFF</h1>
+                        <h3 class="text-[#030712CC] font-semibold text-xl">on your next purchase</h3>
+                        <p class="text-[#03071280] font-medium text-lg">use by March 2024</p>
+                    </div>
+                    <div class="absolute left-[376px]">
+                        <img src="images/cupon-divider.png" alt="Divider">
+                    </div>
+                    <div class="w-[180px] text-center">
+                        <h2 class="text-[#030712CC] font-bold text-3xl">Couple 20</h2>
+                        <p class="text-[#03071280] font-medium text-xl">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn bg-white rounded-xl border-2 text-p-green border-p-green hover:border-p-green hover:bg-p-green hover:text-white mx-auto block">See All Offers</button>
         </section>
 
         <!-- Booking Section -->
-        <section id="booking-section">
+        <section id="booking-section" class="mt-10 lg:mt-32">
+            <div class="bg-[#F7F8F8] max-w-[1170px] w-full mx-auto"></div>
         </section>
     </main>
 
