@@ -147,7 +147,7 @@
                 </div>
                 <!-- Booking Information Section -->
                 <div
-                    class="w-[84%] h-[418px] bg-white rounded-3xl flex items-center justify-between gap-0 relative mx-auto mt-7 p-8">
+                    class="w-full h-[418px] bg-white rounded-3xl flex items-center justify-between gap-0 relative mx-auto mt-7 p-16">
                     <div class="w-[75%]">
                         <div class="flex justify-between">
                             <div class="flex gap-3 items-center">
@@ -189,7 +189,8 @@
                     </div>
                 </div>
                 <!-- Booking Button Section -->
-                <div class="w-[84%] bg-white rounded-3xl flex flex-1 justify-between gap-0 mx-auto mt-12 py-8">
+                <div class="w-full bg-white rounded-3xl flex flex-1 justify-between gap-0 mx-auto mt-12 py-8">
+                    <!-- Select Your Seat Left -->
                     <div class="lg:w-3/5 p-8">
                         <h3 class="text-2xl text-p-black font-semibold">Select Your Seat</h3>
                         <hr class="border-dashed border my-6">
@@ -203,7 +204,7 @@
                         </div>
                         <hr class="border-dashed border my-6">
                         <!-- Seat Grid -->
-                        <div class="text-[#03071280] font-inter grid grid-cols-9 gap-6 items-center">
+                        <div class="text-[#03071280] font-inter grid grid-cols-9 gap-6 items-center p-4">
                             <div></div>
                             <div class="col-span-2"></div>
                             <div class="col-span-2"></div>
@@ -302,25 +303,64 @@
                                 class="btn text-[#03071280] col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">J4</button>
                         </div>
                     </div>
-                    <div class="lg:w-2/5 border-l border-p-gray border-dashed p-8">
+                    <!-- Select Your Seat Right -->
+                    <div class="lg:w-2/5 border-l border-p-gray border-dashed p-10">
                         <h3 class="text-2xl text-p-black font-semibold">Select Your Seat</h3>
                         <hr class="border-dashed border my-6">
-                        <table class="table font-inter">
-                            <thead class="text-p-black font-medium border-b border-dashed">
-                                <tr class="border-0">
-                                    <th>Seat <span id="booked-seats" class="bg-p-green text-white w-6 px-2 py-0 rounded-md">0</span></th>
-                                    <th>Class</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody id="seat-booked" class="text-[#03071299] text-base font-normal">
-                                <tr class="border-0">
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Total eats and Price -->
+                        <div class="p-6 text-base font-inter bg-[#F7F8F8] rounded-xl">
+                            <table class="table">
+                                <thead class="text-p-black text-base font-medium border-b border-dashed">
+                                    <tr class="border-0">
+                                        <th>Seat <span id="booked-seats"
+                                                class="bg-p-green !text-xs text-white w-6 px-2 py-0 rounded-md">0</span>
+                                        </th>
+                                        <th>Class</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="seat-booked"
+                                    class="text-[#03071299] text-base font-normal border-b border-[#03071233]">
+                                    <tr class="border-0">
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="flex justify-between pl-4 pr-12 font-medium mt-4">
+                                <h4 class="">Total Price</h4>
+                                <h4 class="">BDT <span id="total-price">0</span></h4>
+                            </div>
+                            <!-- Apply Coupon -->
+                            <div class="p-2 mt-4 flex flex-1 gap-2 justify-between items-center rounded-xl bg-white">
+                                <form>
+                                    <input id="coupon" class="w-full text-sm p-3 focus:outline-none focus:border focus:rounded-lg" type="text" name="coupon"
+                                        placeholder="Have any coupon?">
+                                </form>
+                                    <button
+                                        class="btn inline p-2 w-24 rounded-lg text-white font-bold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Apply</button>
+                            </div>
+                            <div class="flex justify-between pl-4 pr-12 font-medium mt-4">
+                                <h4 class="">Grand Total</h4>
+                                <h4 class="">BDT <span id="grand-total">0</span></h4>
+                            </div>
+                        </div>
+                        <div class="">
+                            <form>
+                                <label class="font-semibold text-p-black text-base block py-4" for="name">Passenger Name*</label>
+                                <input class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg" type="text" name="name" id="name">
+                                <label class="font-semibold text-p-black text-base block py-4" for="phone">Phone Number*</label>
+                                <input class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg" type="number" name="phone" id="phone">
+                                <label class="font-semibold text-p-black text-base block py-4" for="email">Email ID</label>
+                                <input class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg" type="email" name="email" id="email">
+                                <button id="next" class="btn block my-6 w-full h-16 rounded-lg text-xl text-white font-extrabold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Next</button>
+                                <div class="flex justify-around text-[#03071299]">
+                                    <div><a href="#" class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Terms and Conditions</a></div>
+                                    <div><a href="#" class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Cancellation Policy</a></div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -333,6 +373,7 @@
     </footer>
 
     <!-- Script File -->
+    <script src="scripts/common.js"></script>
     <script src="scripts/ticket.js"></script>
 </body>
 
