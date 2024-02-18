@@ -10,10 +10,7 @@ function setTextValueById(id, value) {
 }
 
 function setTableTextById(id, seatNumber, price) {
-
-    const element = document.getElementById(id);
-
-    const tableBody = document.getElementById('booked-seats-details');
+    const tableBody = document.getElementById(id);
     const tr = document.createElement('tr');
     tr.classList.add('border-0');
     tableBody.appendChild(tr);
@@ -21,4 +18,9 @@ function setTableTextById(id, seatNumber, price) {
     tr.innerHTML = `<td>${seatNumber}</td>
                     <td>Economy</td>
                     <td class="text-right" id="cart-price">${price}</td>`;
+}
+
+function getInputStringById(id) {
+    const inputText = document.getElementById(id).value;
+    return inputText;
 }

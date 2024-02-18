@@ -48,7 +48,7 @@ function seatNumberClicked(event) {
     const ticketPrice = getTextValueById('fare-rate');
     setTableTextById('booked-seats-details', seatNumber, ticketPrice);
 
-    // Setting Total Price
+    // Calculating Total Price
     let totalPrice = getTextValueById('total-price');
     totalPrice = totalPrice + ticketPrice;
     setTextValueById('total-price', totalPrice);
@@ -78,3 +78,36 @@ function disableAllSeats() {
         }
     };
 }
+
+// Enabling the Coupon Input Field
+const couponField = document.getElementById('coupon');
+couponField.addEventListener('keyup', function (event) {
+    const couponText = event.target.value;
+    if (couponText === 'NEW15' || couponText === 'Couple 20') {
+        couponApply.removeAttribute('disabled');
+    }
+});
+
+// Calculating Grand Total and Disabling Apply Button after applying coupon
+function grandTotalCoupon() {
+    let totalPrice = getTextValueById('total-price');
+    let grandTotal = getTextValueById('grand-total');
+    const couponText = getInputStringById('coupon')
+
+    if (couponText === 'NEW15') {
+        grandTotal = totalPrice - (totalPrice * 15) / 100;
+        setTextValueById('grand-total', grandTotal);
+        couponField.value = '';
+        couponApply.setAttribute('disabled', true);
+    }
+    else if (couponText === 'Couple 20') {
+        grandTotal = totalPrice - (totalPrice * 20) / 100;
+        setTextValueById('grand-total', grandTotal);
+        couponField.value = '';
+        couponApply.setAttribute('disabled', true);
+    }
+}
+
+// Coupon Apply button
+const couponApply = document.getElementById('coupon-apply');
+couponApply.addEventListener('click', grandTotalCoupon);
