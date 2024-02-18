@@ -47,7 +47,7 @@
     <main class="mx-auto">
         <!-- Banner Section -->
         <section id="banner" class="mx-8 lg:mx-32 lg:mt-8 mt-4">
-            <div class="max-w-[1170px] w-full mx-auto relative">
+            <div class="max-w-[1440px] w-full mx-auto relative">
                 <!-- Texts inside the Banner -->
                 <div
                     class="w-[75%] text-center text-white absolute lg:top-16 top-4 left-1/2 right-1/2 -translate-x-1/2">
@@ -66,7 +66,7 @@
                 </div>
                 <!-- cards -->
                 <div
-                    class="mx-auto w-[84%] font-inter flex flex-col md:flex-row gap-6 lg:absolute lg:bottom-[-72px] lg:left-1/2 lg:right-1/2 lg:-translate-x-1/2">
+                    class="mx-auto lg:w-[960px] font-inter flex flex-1 flex-col md:flex-row gap-6 lg:absolute lg:bottom-[-72px] lg:left-1/2 lg:right-1/2 lg:-translate-x-1/2">
                     <div
                         class="w-[320px] h-36 bg-white rounded-3xl border-b-4 border-p-green flex justify-center items-center gap-4">
                         <div class=""><img src="images/people.png" alt="People"></div>
@@ -99,9 +99,9 @@
         <section id="best-offers" class="mx-8 lg:mx-32 lg:mt-48 mt-16">
             <h1 class="text-5xl font-bold text-center">Best offers for you</h1>
             <!-- Tickets -->
-            <div class="flex lg:flex-row flex-col flex-1 gap-6 lg:mt-12 mt-5 lg:mb-12">
+            <div class="max-w-[1440px] w-full mx-auto flex lg:flex-row flex-col flex-1 gap-6 lg:mt-12 mt-5 lg:mb-12">
                 <!-- 15% OFF -->
-                <div class="bg-[#FFBF0F] flex h-[220px] rounded-3xl items-center gap-0 relative">
+                <div class="bg-[#FFBF0F] flex flex-1 h-[220px] rounded-3xl items-center gap-0 relative">
                     <div class="font-inter w-[400px] pl-12">
                         <h1 class="text-[#030712CC] font-black text-4xl">15% OFF</h1>
                         <h3 class="text-[#030712CC] font-semibold text-xl">on your next purchase</h3>
@@ -138,7 +138,7 @@
 
         <!-- Booking Section -->
         <section id="booking-section" class="mt-10 lg:mt-32">
-            <div class="bg-[#F7F8F8] border-p-green border-t-2 rounded-t-[88px] w-full mx-auto px-32 py-28">
+            <div class="bg-[#F7F8F8] border-p-green border-t-2 rounded-t-[88px] max-w-[1440px] w-full mx-auto px-32 py-28">
                 <!-- Booking Title Section -->
                 <div class="mx-auto text-center">
                     <h1 class="text-4xl text-p-black font-bold text-center">Pegasus Travels</h1>
@@ -159,7 +159,7 @@
                             </div>
                             <div class="bg-[#1DD10026] rounded-xl flex gap-1 items-center p-4 h-14">
                                 <img src="images/seat-green.png" alt="Seat">
-                                <h3 class="font-inter text-p-green font-medium text-lg"><span id="total-seat">40</span>
+                                <h3 class="font-inter text-p-green font-medium text-lg"><span id="seat-left">40</span>
                                     Seats left</h3>
                             </div>
                         </div>
@@ -312,8 +312,8 @@
                             <table class="table">
                                 <thead class="text-p-black text-base font-medium border-b border-dashed">
                                     <tr class="border-0">
-                                        <th>Seat <span id="booked-seats"
-                                                class="bg-p-green !text-xs text-white w-6 px-2 py-0 rounded-md">0</span>
+                                        <th class="flex justify-start gap-1 items-center"><span class="block">Seat</span> <span id="booked-seats"
+                                                class="bg-p-green block !text-xs text-white w-6 px-2 py-0 rounded-md">0</span>
                                         </th>
                                         <th>Class</th>
                                         <th class="text-right">Price</th>
@@ -335,11 +335,12 @@
                             <!-- Apply Coupon -->
                             <div class="p-2 mt-4 flex flex-1 gap-2 justify-between items-center rounded-xl bg-white">
                                 <form>
-                                    <input id="coupon" class="w-full text-sm p-3 focus:outline-none focus:border focus:rounded-lg" type="text" name="coupon"
-                                        placeholder="Have any coupon?">
+                                    <input id="coupon"
+                                        class="w-full text-sm p-3 focus:outline-none focus:border focus:rounded-lg"
+                                        type="text" name="coupon" placeholder="Have any coupon?" disabled>
                                 </form>
-                                    <button
-                                        class="btn inline p-2 w-24 rounded-lg text-white font-bold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Apply</button>
+                                <button
+                                    class="btn inline p-2 w-24 rounded-lg text-white font-bold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Apply</button>
                             </div>
                             <div class="flex justify-between px-4 font-medium mt-4">
                                 <h4 class="">Grand Total</h4>
@@ -348,16 +349,45 @@
                         </div>
                         <div class="">
                             <form>
-                                <label class="font-semibold text-p-black text-base block py-4" for="name">Passenger Name*</label>
-                                <input class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg" type="text" name="name" id="name">
-                                <label class="font-semibold text-p-black text-base block py-4" for="phone">Phone Number*</label>
-                                <input class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg" type="number" name="phone" id="phone">
-                                <label class="font-semibold text-p-black text-base block py-4" for="email">Email ID</label>
-                                <input class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg" type="email" name="email" id="email">
-                                <button id="next" class="btn block my-6 w-full h-16 rounded-lg text-xl text-white font-extrabold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Next</button>
+                                <label class="font-semibold text-p-black text-base block py-4" for="name">Passenger
+                                    Name*</label>
+                                <input
+                                    class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg"
+                                    type="text" name="name" id="name" placeholder="Enter your name">
+                                <label class="font-semibold text-p-black text-base block py-4" for="phone">Phone
+                                    Number*</label>
+                                <input
+                                    class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg"
+                                    type="number" name="phone" id="phone" placeholder="Enter your phone number">
+                                <label class="font-semibold text-p-black text-base block py-4" for="email">Email
+                                    ID</label>
+                                <input
+                                    class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg"
+                                    type="email" name="email" id="email" placeholder="Enter your email id">
+
+                                <button class="btn block my-6 w-full h-16 rounded-lg text-xl text-white font-extrabold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green" onclick="my_modal_1.showModal()">Next</button>
+                                <dialog id="my_modal_1" class="modal">
+                                    <div class="modal-box">
+                                        <h3 class="font-bold text-lg">Hello!</h3>
+                                        <p class="py-4">Press ESC key or click the button below to close</p>
+                                        <div class="modal-action">
+                                            <form method="dialog">
+                                                <!-- if there is a button in form, it will close the modal -->
+                                                <button class="btn">Close</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </dialog>
+
+                                <!-- <button id="next"
+                                    class="btn block my-6 w-full h-16 rounded-lg text-xl text-white font-extrabold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Next</button> -->
                                 <div class="flex justify-around text-[#03071299]">
-                                    <div><a href="#" class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Terms and Conditions</a></div>
-                                    <div><a href="#" class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Cancellation Policy</a></div>
+                                    <div><a href="#"
+                                            class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Terms
+                                            and Conditions</a></div>
+                                    <div><a href="#"
+                                            class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Cancellation
+                                            Policy</a></div>
                                 </div>
                             </form>
                         </div>

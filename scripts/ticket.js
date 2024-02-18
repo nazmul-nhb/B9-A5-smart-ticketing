@@ -1,4 +1,4 @@
-// Buy Tickets Button in Banner Section
+// Click Buy Tickets button to jump to Booking Section
 function jumpToReference() {
     const reference = document.getElementById('booking-section');
     if (reference) {
@@ -6,21 +6,30 @@ function jumpToReference() {
     }
 }
 
-// Clicking on Seat Numbers
+// Events while Clicking on Seat Numbers
 function seatNumberClicked(event) {
     const seatNumberElement = event.target;
     const seatNumber = event.target.innerText;
-    
-    // Disabling button after 1 click
-    seatNumberElement.setAttribute('disabled', 'disabled');
-    // Adding a class to set BG
-    seatNumberElement.classList.add('button-p-bg');
-    let seatLeft = getTextValueById('total-seat');
-    
-    // Seat Left Count Above
+
+    if (!seatNumberElement.hasAttribute('disabled')) {
+        // Disabling button after 1 click
+        seatNumberElement.setAttribute('disabled', true);
+        // Adding a class to set BG
+        seatNumberElement.classList.add('button-p-bg');
+    }
+    // Why doesn't it work?
+    else if (seatNumberElement.hasAttribute('disabled')) {
+        // Enabling button after 1 click
+        seatNumberElement.removeAttribute('disabled');
+        // Removing the class to remove BG
+        seatNumberElement.classList.remove('button-p-bg');
+    }
+
+    // Seat Left Counter in the Previous Section
+    let seatLeft = getTextValueById('seat-left');
     if (seatNumberElement) {
         seatLeft = seatLeft - 1;
-        setTextValueById('total-seat', seatLeft);
+        setTextValueById('seat-left', seatLeft);
     }
 
     // Show Number of Booked Seats on the Right
@@ -44,6 +53,13 @@ function seatNumberClicked(event) {
     totalPrice = totalPrice + ticketPrice;
     setTextValueById('total-price', totalPrice);
     setTextValueById('grand-total', totalPrice);
+
+    // Enable Coupon Input Field
+    const couponInput = document.getElementById('coupon');
+    if (bookedSeat === 4) {
+        couponInput.removeAttribute('disabled');
+        // alert('You Got Coupon!');
+    }
 }
 
 // Traversing the seat buttons
@@ -58,7 +74,7 @@ function disableAllSeats() {
     const buttons = document.querySelectorAll('.seat-button');
     for (let button of buttons) {
         if (!button.hasAttribute('disabled')) {
-            button.setAttribute('disabled', 'disabled');
+            button.setAttribute('disabled', true);
         }
     };
 }
