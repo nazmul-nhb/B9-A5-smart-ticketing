@@ -233,9 +233,9 @@
                 </div>
                 <!-- Booking Button Section -->
                 <div
-                    class="max-w-[1440px] w-full bg-white rounded-3xl flex flex-1 justify-between gap-0 mx-auto mt-12 py-8">
+                    class="max-w-[1440px] w-full bg-white rounded-3xl flex lg:flex-row flex-col flex-1 justify-between gap-0 mx-auto mt-12 py-8">
                     <!-- Select Your Seat Left -->
-                    <div class="lg:w-3/5 p-8">
+                    <div class="lg:w-3/5 w-full p-8">
                         <h3 class="text-2xl text-p-black font-semibold">Select Your Seat</h3>
                         <hr class="border-dashed border my-6">
                         <div class="font-inter flex justify-between items-center text-lg font-medium">
@@ -348,7 +348,7 @@
                         </div>
                     </div>
                     <!-- Select Your Seat Right -->
-                    <div class="lg:w-2/5 border-l border-p-gray border-dashed px-10 py-8">
+                    <div class="lg:w-2/5 w-full border-l border-p-gray border-dashed px-10 py-8">
                         <h3 class="text-2xl text-p-black font-semibold">Select Your Seat</h3>
                         <hr class="border-dashed border my-6">
                         <!-- Total eats and Price -->
@@ -416,24 +416,31 @@
                                     class="w-full h-16 text-sm p-6 focus:outline-none border rounded-lg focus:border focus:rounded-lg"
                                     type="email" name="email" id="email" placeholder="Enter your email id">
 
-                                <button id="next"
-                                    class="btn block my-6 w-full h-16 rounded-lg text-xl text-white font-extrabold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green"
-                                    onclick="my_modal_1.showModal()" disabled>Next</button>
-                                <dialog id="my_modal_1" class="modal">
-                                    <div class="modal-box">
-                                        <h3 class="font-bold text-lg">Hello!</h3>
-                                        <p class="py-4">Press ESC key or click the button below to close</p>
-                                        <div class="modal-action">
-                                            <form method="dialog">
-                                                <!-- if there is a button in form, it will close the modal -->
-                                                <button class="btn">Close</button>
-                                            </form>
+                                <!-- The button to open modal -->
+                                <label id="next" for="my_modal_6"
+                                    class="btn my-6 w-full h-16 rou nded-lg text-xl text-white font-extrabold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green"
+                                    disabled>Next</label>
+
+                                <!-- Modal -->
+                                <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+                                <div class="modal" role="dialog">
+                                    <div
+                                        class="modal-box pt-12 text-center flex flex-col items-center justify-center gap-8">
+                                        <div class="text-center"><img src="images/success.png" alt="Success"></div>
+                                        <h3 class="font-bold text-2xl text-[#27AE60]">SUCCESS</h3>
+                                        <div>
+                                            <p class="font-medium text-xl">Thank you for Booking Our Bus Seats.
+                                            <br>We are working hard to find the best service and deals for you.
+                                        </p>
+                                        <p class="font-light text-xl mt-2">Shortly you will find a confirmation in your
+                                            email.</p>
+                                        </div>
+                                        <div class="modal-acttion">
+                                            <label for="my_modal_6" class="btn w-72 h-14 rounded-[32px] bg-[#27AE60] border border-[#27AE60] text-xl text-white hover:text-[#27AE60] hover:bg-transparent hover:border-[#27AE60]">Continue</label>
                                         </div>
                                     </div>
-                                </dialog>
+                                </div>
 
-                                <!-- <button id="next"
-                                    class="btn block my-6 w-full h-16 rounded-lg text-xl text-white font-extrabold bg-p-green border border-p-green hover:text-p-green hover:bg-transparent hover:border-p-green">Next</button> -->
                                 <div class="flex justify-around text-[#03071299]">
                                     <div><a href="#"
                                             class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Terms

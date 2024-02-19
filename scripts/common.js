@@ -22,8 +22,8 @@ function setTableTextById(id, seatNumber, price) {
 
 function setDiscountAmountById(id, discount) {
     const discountAmount = document.getElementById(id);
-    discountAmount.innerHTML = `<h4 class="">Discount Amount</h4>
-                                <h4 class="">-BDT <span id="total-price">${discount}</span></h4>`
+    discountAmount.innerHTML = `<h4 class="">Discount</h4>
+                                <h4 class="">- BDT <span id="total-price">${discount}</span></h4>`
 }
 
 
