@@ -58,7 +58,6 @@ function seatNumberClicked(event) {
     const couponInput = document.getElementById('coupon');
     if (bookedSeat === 4) {
         couponInput.removeAttribute('disabled');
-        // alert('You Got Coupon!');
     }
 }
 
@@ -89,14 +88,6 @@ couponField.addEventListener('keyup', function (event) {
     else if (couponText.length <= 0) {
         couponApply.setAttribute('disabled', true);
     }
-
-
-    /*     if (couponText === 'NEW15' || couponText === 'Couple 20') {
-            alert('Congratulations! You got Discount')
-        }
-        else {
-            alert('Wrong Coupon!')
-        } */
 });
 
 // Calculating Grand Total and Showing Alerts
@@ -116,8 +107,6 @@ function grandTotalCoupon() {
 
         alert('Congratulations! You got 15% Discount')
         couponDiv.classList.add('hidden');
-        // couponField.value = '';
-        // couponApply.setAttribute('disabled', true);
     }
     else if (couponText === 'Couple 20') {
         grandTotal = totalPrice - (totalPrice * 20) / 100;
@@ -129,8 +118,6 @@ function grandTotalCoupon() {
 
         alert('Congratulations! You got 20% Discount')
         couponDiv.classList.add('hidden');
-        // couponField.value = '';
-        // couponApply.setAttribute('disabled', true);
     }
     else if (couponText !== 'NEW15') {
         alert('Wrong Coupon!')
