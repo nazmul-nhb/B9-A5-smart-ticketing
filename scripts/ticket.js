@@ -164,7 +164,12 @@ phoneNumber.addEventListener('keyup', function (event) {
 
 // Function for Next Button
 function successNext() {
-    const phoneNumber = getInputStringById('phone');
+    const phoneField = document.getElementById('phone');
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    phoneField.value = '';
+    nameField.value = '';
+    emailField.value = '';
 }
 
 
