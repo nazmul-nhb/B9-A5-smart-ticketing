@@ -39,7 +39,7 @@
     <header>
         <!-- Navbar Section -->
         <nav class="container mx-auto">
-            <div class="navbar w-auto justify-between mx-5 lg:mx-20 mt-4 lg:mt-12 bg-base-100">
+            <div class="navbar w-auto justify-between mx-5 lg:mx-20 mt-4 lg:mt-8 bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost pl-0 lg:hidden">
@@ -51,30 +51,31 @@
                         </div>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-[#424247] shadow bg-base-100 rounded-box w-52">
-                            <li><a>Home</a></li>
-                            <li><a>About</a></li>
-                            <li><a>Destination</a></li>
-                            <li><a>Search</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#footer">About</a></li>
+                            <li><a href="#best-offers">Destination</a></li>
+                            <li><a href="#">Search</a></li>
                         </ul>
                     </div>
-                    <h3 class="text-hockey-black font-extrabold text-2xl lg:text-4xl">Pegasus Travels</h3>
+                    <h3 class="text-hockey-black font-extrabold text-xl lg:text-4xl">Pegasus Travels</h3>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 text-[#424247]">
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Destination</a></li>
-                        <li><a>Search</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#footer">About</a></li>
+                        <li><a href="#best-offers">Destination</a></li>
+                        <li><a href="#">Search</a></li>
                     </ul>
                 </div>
                 <div class="navbar-end flex justify-end gap-6">
                     <!-- Search Button -->
-<!--                     <button class="btn btn-ghost btn-circle lg:block hidden">
+                    <!--                     <button class="btn btn-ghost btn-circle lg:block hidden">
                         <i class="fa-solid fa-magnifying-glass text-2xl text-[#89898B]"></i>
                     </button> -->
                     <!-- Get Ticket -->
-                    <button
+                    <button onclick="jumpToReference()"
                         class="btn text-lg w-32 lg:w-36 h-10 lg:h-14 lg:text-xl font-bold text-p-green bg-[#1DD1001A] border-p-green hover:bg-white hover:border-p-green hover:text-p-green">
+                        <!-- <a href="#booking-section"></a> -->
                         Bus <img src="images/bus-icon.png" alt="Bus">
                     </button>
                 </div>
@@ -142,8 +143,7 @@
             <div
                 class="max-w-[1440px] w-full mx-auto flex lg:flex-row md:flex-col flex-col items-center gap-6 lg:mt-12 mt-5 lg:mb-12">
                 <!-- 15% OFF -->
-                <div
-                    class="bg-[#FFBF0F] w-1/2 mx-auto flex flex-1 h-[220px] rounded-3xl items-center gap-0 relative">
+                <div class="bg-[#FFBF0F] w-1/2 mx-auto flex flex-1 h-[220px] rounded-3xl items-center gap-0 relative">
                     <div class="font-inter w-[400px] lg:h-auto h-[220px] pl-12">
                         <h1 class="text-[#030712CC] font-black text-4xl">15% OFF</h1>
                         <h3 class="text-[#030712CC] font-semibold text-xl">on your next purchase</h3>
@@ -158,8 +158,7 @@
                     </div>
                 </div>
                 <!-- 20% OFF -->
-                <div
-                    class="bg-[#F78C9C] w-1/2 mx-auto flex flex-1 h-[220px] rounded-3xl items-center gap-0 relative">
+                <div class="bg-[#F78C9C] w-1/2 mx-auto flex flex-1 h-[220px] rounded-3xl items-center gap-0 relative">
                     <div class="font-inter w-[400px] lg:h-auto h-[220px] pl-12">
                         <h1 class="text-[#030712CC] font-black text-4xl">20% OFF</h1>
                         <h3 class="text-[#030712CC] font-semibold text-xl">on your next purchase</h3>
@@ -379,7 +378,7 @@
                                 <h4 class="">BDT <span id="total-price">0</span></h4>
                             </div>
                             <div id="discount-amount" class="flex justify-between px-4 font-medium mt-4 text-p-gray">
-<!--                            <h4 class="">Discount Amount</h4>
+                                <!--                            <h4 class="">Discount Amount</h4>
                                 <h4 class="">-BDT <span>0</span></h4> -->
                             </div>
                             <!-- Apply Coupon -->
@@ -452,7 +451,7 @@
     </main>
 
     <!-- Footer Section -->
-    <footer>
+    <footer id="footer">
 
     </footer>
 
