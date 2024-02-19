@@ -83,15 +83,23 @@ function disableAllSeats() {
 const couponField = document.getElementById('coupon');
 couponField.addEventListener('keyup', function (event) {
     const couponText = event.target.value;
-    if (couponText === 'NEW15' || couponText === 'Couple 20') {
+    if (couponText.length > 0) {
         couponApply.removeAttribute('disabled');
     }
-    else {
+    else if (couponText.length <= 0) {
         couponApply.setAttribute('disabled', true);
     }
+
+
+    /*     if (couponText === 'NEW15' || couponText === 'Couple 20') {
+            alert('Congratulations! You got Discount')
+        }
+        else {
+            alert('Wrong Coupon!')
+        } */
 });
 
-// Calculating Grand Total and Disabling Apply Button after applying coupon
+// Calculating Grand Total and Showing Alerts
 function grandTotalCoupon() {
     let totalPrice = getTextValueById('total-price');
     let grandTotal = getTextValueById('grand-total');
@@ -100,7 +108,13 @@ function grandTotalCoupon() {
 
     if (couponText === 'NEW15') {
         grandTotal = totalPrice - (totalPrice * 15) / 100;
+        // Setting the Value in Grand Total row
         setTextValueById('grand-total', grandTotal);
+        // Setting discount amount below the Total Price
+        const discount = totalPrice - grandTotal;
+        setDiscountAmountById('discount-amount', discount);
+
+        alert('Congratulations! You got 15% Discount')
         couponDiv.classList.add('hidden');
         // couponField.value = '';
         // couponApply.setAttribute('disabled', true);
@@ -108,9 +122,25 @@ function grandTotalCoupon() {
     else if (couponText === 'Couple 20') {
         grandTotal = totalPrice - (totalPrice * 20) / 100;
         setTextValueById('grand-total', grandTotal);
+
+        // Setting discount amount below the Total Price
+        const discount = totalPrice - grandTotal;
+        setDiscountAmountById('discount-amount', discount);
+
+        alert('Congratulations! You got 20% Discount')
         couponDiv.classList.add('hidden');
         // couponField.value = '';
         // couponApply.setAttribute('disabled', true);
+    }
+    else if (couponText !== 'NEW15') {
+        alert('Wrong Coupon!')
+        couponField.value = '';
+        couponApply.setAttribute('disabled', true);
+    }
+    else if (couponText !== 'Couple 20') {
+        alert('Wrong Coupon!')
+        couponField.value = '';
+        couponApply.setAttribute('disabled', true);
     }
 }
 
@@ -119,32 +149,21 @@ const couponApply = document.getElementById('coupon-apply');
 couponApply.addEventListener('click', grandTotalCoupon);
 
 
-
-// const nameField = getInputTargetValueById('name');
-// const phoneField = getInputTargetValueById('phone');
-// const emailField = getInputTargetValueById('email');
-// console.log(nameField);
-// const nameField = document.getElementById('name');
-// nameField.addEventListener('keyup', function (event) {
-//     const nameValue = event.target.value;
-//     console.log(nameValue);
-// });
-// const phoneField = document.getElementById('phone');
-// 
-
 // Enabling Next button
 const phoneNumber = document.getElementById('phone');
 phoneNumber.addEventListener('keyup', function (event) {
     const phoneValue = event.target.value;
     console.log(phoneValue);
-    if(phoneValue.length == 11){
+    if (phoneValue.length > 0) {
         nextButton.removeAttribute('disabled');
     }
-    else{
+    else {
         nextButton.setAttribute('disabled', true);
     }
 });
-function successNext (){
+
+// Function for Next Button
+function successNext() {
     const phoneNumber = getInputStringById('phone');
 }
 

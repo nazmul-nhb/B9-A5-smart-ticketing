@@ -20,6 +20,13 @@ function setTableTextById(id, seatNumber, price) {
                     <td class="text-right" id="cart-price">${price}</td>`;
 }
 
+function setDiscountAmountById(id, discount) {
+    const discountAmount = document.getElementById(id);
+    discountAmount.innerHTML = `<h4 class="">Discount Amount</h4>
+                                <h4 class="">-BDT <span id="total-price">${discount}</span></h4>`
+}
+
+
 function getInputStringById(id) {
     const inputText = document.getElementById(id).value;
     return inputText;
