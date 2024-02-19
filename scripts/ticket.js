@@ -17,13 +17,6 @@ function seatNumberClicked(event) {
         // Adding a class to set BG
         seatNumberElement.classList.add('button-p-bg');
     }
-    // Why doesn't it work?
-    else if (seatNumberElement.hasAttribute('disabled')) {
-        // Enabling button after 1 click
-        seatNumberElement.removeAttribute('disabled');
-        // Removing the class to remove BG
-        seatNumberElement.classList.remove('button-p-bg');
-    }
 
     // Seat Left Counter in the Previous Section
     let seatLeft = getTextValueById('seat-left');
@@ -70,7 +63,6 @@ for (let button of buttons) {
 
 // Function to disable all remaining seats
 function disableAllSeats() {
-    const buttons = document.querySelectorAll('.seat-button');
     for (let button of buttons) {
         if (!button.hasAttribute('disabled')) {
             button.setAttribute('disabled', true);
@@ -140,7 +132,6 @@ couponApply.addEventListener('click', grandTotalCoupon);
 const phoneNumber = document.getElementById('phone');
 phoneNumber.addEventListener('keyup', function (event) {
     const phoneValue = event.target.value;
-    console.log(phoneValue);
     if (phoneValue.length > 0) {
         nextButton.removeAttribute('disabled');
     }
@@ -158,6 +149,21 @@ function successNext() {
     nameField.value = '';
     emailField.value = '';
     nextButton.setAttribute('disabled', true);
+
+    // Resetting Booking Extra
+    for (let button of buttons) {
+        if (button.classList.contains('button-p-bg')) {
+            button.classList.remove('button-p-bg');
+        }
+    }
+/* 
+    let totalPrice = getTextValueById('total-price');
+    let grandTotal = getTextValueById('grand-total');
+    totalPrice = 0;
+    grandTotal = 0;
+
+    let bookedSeat = getTextValueById('booked-seats');
+    bookedSeat = 0; */
 }
 
 
