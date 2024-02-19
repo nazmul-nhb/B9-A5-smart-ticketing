@@ -76,7 +76,7 @@ function disableAllSeats() {
         if (!button.hasAttribute('disabled')) {
             button.setAttribute('disabled', true);
         }
-    };
+    }
 }
 
 // Enabling the Coupon Input Field
@@ -86,28 +86,69 @@ couponField.addEventListener('keyup', function (event) {
     if (couponText === 'NEW15' || couponText === 'Couple 20') {
         couponApply.removeAttribute('disabled');
     }
+    else {
+        couponApply.setAttribute('disabled', true);
+    }
 });
 
 // Calculating Grand Total and Disabling Apply Button after applying coupon
 function grandTotalCoupon() {
     let totalPrice = getTextValueById('total-price');
     let grandTotal = getTextValueById('grand-total');
-    const couponText = getInputStringById('coupon')
+    const couponText = getInputStringById('coupon');
+    const couponDiv = document.getElementById('coupon-div');
 
     if (couponText === 'NEW15') {
         grandTotal = totalPrice - (totalPrice * 15) / 100;
         setTextValueById('grand-total', grandTotal);
-        couponField.value = '';
-        couponApply.setAttribute('disabled', true);
+        couponDiv.classList.add('hidden');
+        // couponField.value = '';
+        // couponApply.setAttribute('disabled', true);
     }
     else if (couponText === 'Couple 20') {
         grandTotal = totalPrice - (totalPrice * 20) / 100;
         setTextValueById('grand-total', grandTotal);
-        couponField.value = '';
-        couponApply.setAttribute('disabled', true);
+        couponDiv.classList.add('hidden');
+        // couponField.value = '';
+        // couponApply.setAttribute('disabled', true);
     }
 }
 
 // Coupon Apply button
 const couponApply = document.getElementById('coupon-apply');
 couponApply.addEventListener('click', grandTotalCoupon);
+
+
+
+// const nameField = getInputTargetValueById('name');
+// const phoneField = getInputTargetValueById('phone');
+// const emailField = getInputTargetValueById('email');
+// console.log(nameField);
+// const nameField = document.getElementById('name');
+// nameField.addEventListener('keyup', function (event) {
+//     const nameValue = event.target.value;
+//     console.log(nameValue);
+// });
+// const phoneField = document.getElementById('phone');
+// 
+
+// Enabling Next button
+const phoneNumber = document.getElementById('phone');
+phoneNumber.addEventListener('keyup', function (event) {
+    const phoneValue = event.target.value;
+    console.log(phoneValue);
+    if(phoneValue.length == 11){
+        nextButton.removeAttribute('disabled');
+    }
+    else{
+        nextButton.setAttribute('disabled', true);
+    }
+});
+function successNext (){
+    const phoneNumber = getInputStringById('phone');
+}
+
+
+// Next Button
+const nextButton = document.getElementById('next');
+nextButton.addEventListener('click', successNext);

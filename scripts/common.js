@@ -24,3 +24,14 @@ function getInputStringById(id) {
     const inputText = document.getElementById(id).value;
     return inputText;
 }
+
+
+// Getting Event Values by ID
+/* function getInputTargetValueById(id) {
+    const inputTarget = document.getElementById(id);
+    inputTarget.addEventListener('keyup', function (event) {
+        const targetValue = event.target.value;
+        return targetValue;
+    }
+    )
+} */
