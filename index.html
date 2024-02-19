@@ -140,7 +140,7 @@
             <div
                 class="max-w-[1440px] w-full mx-auto flex lg:flex-row md:flex-col flex-col items-center gap-6 lg:mt-12 mt-5 lg:mb-12 mb-8">
                 <!-- 15% OFF -->
-                <div class="bg-[#FFBF0F] lg:w-1/2 w-full mx-auto flex flex-1 h-[220px] rounded-3xl lg:justify-start justify-center content-center items-center gap-0 relative">
+                <div class="bg-[#FFBF0F] lg:w-1/2 w-full mx-auto flex flex-1 lg:h-[220px] rounded-3xl lg:justify-start justify-center items-center gap-0 relative">
                     <div class="font-inter w-[400px] lg:h-auto h-[220px] pl-12">
                         <h1 class="text-[#030712CC] font-black text-4xl">15% OFF</h1>
                         <h3 class="text-[#030712CC] font-semibold text-xl">on your next purchase</h3>
@@ -178,7 +178,7 @@
         <!-- Booking Section -->
         <section id="booking-section" class="mt-10 lg:mt-32">
             <div
-                class="bg-[#F7F8F8] border-p-green border-t-2 rounded-t-[88px] max-w-[1920px] w-full mx-auto px-32 py-28">
+                class="bg-[#F7F8F8] border-p-green border-t-2 rounded-t-[88px] max-w-[1920px] w-full mx-auto px-8 lg:px-32 py-8 lg:py-28">
                 <!-- Booking Title Section -->
                 <div class="mx-auto text-center">
                     <h1 class="text-4xl text-p-black font-bold text-center">Pegasus Travels</h1>
@@ -187,19 +187,19 @@
                 </div>
                 <!-- Booking Information Section -->
                 <div
-                    class="max-w-[1440px] w-full h-[418px] bg-white rounded-3xl flex items-center justify-between gap-0 relative mx-auto mt-7 p-16">
-                    <div class="w-3/4">
+                    class="max-w-[1440px] w-full h-auto lg:h-[418px] bg-white rounded-3xl flex lg:flex-row flex-col items-center justify-between gap-6 lg:gap-0 relative mx-auto mt-7 p-2 lg:p-16">
+                    <div class="w-full lg:w-3/4">
                         <div class="flex justify-between">
                             <div class="flex gap-3 items-center">
                                 <div><img src="images/bus-logo.png" alt="Bus" class="max-w-full"></div>
                                 <div class="">
-                                    <h1 class="text-3xl text-p-black font-bold">Pegasus Travels</h1>
-                                    <p class="text-lg font-inter text-p-gray">C-009-P | Business/Economy</p>
+                                    <h1 class="lg:text-3xl text-lg text-p-black font-bold">Pegasus Travels</h1>
+                                    <p class="text-xs lg:text-lg font-inter text-p-gray">C-009-P | Business/Economy</p>
                                 </div>
                             </div>
-                            <div class="bg-[#1DD10026] rounded-xl flex gap-1 items-center p-4 h-14">
+                            <div class="bg-[#1DD10026] rounded-xl flex gap-1 items-center lg:p-4 p-1 h-14">
                                 <img src="images/seat-green.png" alt="Seat">
-                                <h3 class="font-inter text-p-green font-medium text-lg"><span id="seat-left">40</span>
+                                <h3 class="font-inter text-p-green font-medium lg:text-lg text-xs"><span id="seat-left">40</span>
                                     Seats left</h3>
                             </div>
                         </div>
@@ -214,15 +214,15 @@
                                 <p class="text-p-black">9:00PM</p>
                             </div>
                             <hr class="border-dashed border my-6">
-                            <div class="flex justify-between flex-1 gap-6 text-base text-[#030712CC]">
+                            <div class="flex flex-col lg:flex-row justify-between flex-1 gap-6 text-base text-[#030712CC]">
                                 <button class="btn p-4">Boarding Point - Laxmipur</button>
                                 <button class="btn p-4">Dropping Point - Bogura</button>
                                 <button class="btn p-4">Est. Time - 11 Hour</button>
                             </div>
                         </div>
                     </div>
-                    <div class="absolute right-[18%]"><img src="images/info-divider.png" alt="Divider"></div>
-                    <div class="flex items-center flex-col gap-6">
+                    <div class="lg:block hidden absolute right-[18%]"><img src="images/info-divider.png" alt="Divider"></div>
+                    <div class="flex items-center justify-center flex-col gap-6">
                         <div><img src="images/fare.png" alt="Taka Symbol"></div>
                         <h3 class="font-bold text-3xl text-p-black"><span id="fare-rate">550</span> Taka</h3>
                         <p class="text-p-gray text-2xl font-semibold">Per Seat</p>
