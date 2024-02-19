@@ -245,13 +245,13 @@
                         </div>
                         <hr class="border-dashed border my-6">
                         <!-- Seat Grid -->
-                        <div class="text-[#03071280] font-inter grid grid-cols-9 gap-6 items-center p-4">
+                        <div class="text-[#03071280] font-inter grid grid-cols-9 gap-6 items-center p-2 lg:p-4">
                             <div></div>
                             <div class="col-span-2"></div>
                             <div class="col-span-2"></div>
                             <div class="col-span-2"></div>
-                            <div class="btn bg-[#0307121A] rounded-xl text-center col-span-2" disabled><img
-                                    src="images/wheel.png" alt="Steering"></div>
+                            <div class="btn p-0 bg-[#0307121A] rounded-xl text-center col-span-2" disabled><img
+                                    src="images/wheel.png" alt="Steering" class="lg:w-auto w-6"></div>
                             <div>A</div>
                             <button id="a1"
                                 class="btn text-[#03071280] seat-button col-span-2 rounded-xl bg-[#F7F8F8] border-[#F7F8F8]">A1</button>
@@ -345,11 +345,11 @@
                         </div>
                     </div>
                     <!-- Select Your Seat Right -->
-                    <div class="lg:w-2/5 w-full border-l border-p-gray border-dashed px-10 py-8">
+                    <div class="lg:w-2/5 w-full lg:border-l lg:border-p-gray lg:border-dashed p-4 lg:px-10 py-8">
                         <h3 class="text-2xl text-p-black font-semibold">Select Your Seat</h3>
                         <hr class="border-dashed border my-6">
                         <!-- Total eats and Price -->
-                        <div class="p-6 text-base font-inter bg-[#F7F8F8] rounded-xl">
+                        <div class="p-2 lg:p-6 text-base font-inter bg-[#F7F8F8] rounded-xl">
                             <table class="table">
                                 <thead class="text-p-black text-base font-medium border-b border-dashed">
                                     <tr class="border-0">
@@ -375,8 +375,7 @@
                                 <h4 class="">BDT <span id="total-price">0</span></h4>
                             </div>
                             <div id="discount-amount" class="flex justify-between px-4 font-medium mt-4 text-p-gray">
-                                <!--                            <h4 class="">Discount Amount</h4>
-                                <h4 class="">-BDT <span>0</span></h4> -->
+                                <!-- Discount Amount Goes Here from JavaScript -->
                             </div>
                             <!-- Apply Coupon -->
                             <div id="coupon-div"
@@ -440,7 +439,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex justify-around text-[#03071299]">
+                                <div class="flex lg:flex-row flex-col lg:justify-around items-center justify-center gap-2 text-[#03071299]">
                                     <div><a href="#"
                                             class="border-b border-[#03071299] hover:text-p-green hover:border-p-green">Terms
                                             and Conditions</a></div>
@@ -457,11 +456,11 @@
     </main>
 
     <!-- Footer Section -->
-    <footer id="footer" class="max-w-[1920px] w-full mx-auto text-white bg-p-black py-28 px-32">
+    <footer id="footer" class="max-w-[1920px] w-full mx-auto text-white bg-p-black py-8 lg:py-28 px-8 lg:px-32">
         <div class="flex text-center lg:text-left flex-col lg:flex-row lg:justify-between gap-10 lg:gap-40 flex-1">
             <div class="flex flex-col gap-6">
-                <h4 class="text-4xl font-extrabold">Pegasus Travels</h4>
-                <p class="w-full lg:w-[346px] text-[#FFFFFFCC]">Pegasus Travels is a digital platform to make your daily
+                <h4 class="text-2xl lg:text-4xl font-extrabold">Pegasus Travels</h4>
+                <p class="p-2 lg:p-0 w-full lg:w-[346px] text-[#FFFFFFCC]">Pegasus Travels is a digital platform to make your daily
                     commuting better.</p>
             </div>
             <div class="flex justify-center items-center flex-col gap-8">
