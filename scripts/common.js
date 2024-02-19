@@ -26,7 +26,6 @@ function setDiscountAmountById(id, discount) {
                                 <h4 class="">- BDT <span id="total-price">${discount}</span></h4>`
 }
 
-
 function getInputStringById(id) {
     const inputText = document.getElementById(id).value;
     return inputText;

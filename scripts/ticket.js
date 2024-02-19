@@ -151,19 +151,21 @@ function successNext() {
     nextButton.setAttribute('disabled', true);
 
     // Resetting Booking Extra
+/*    
     for (let button of buttons) {
         if (button.classList.contains('button-p-bg')) {
             button.classList.remove('button-p-bg');
         }
     }
-/* 
+ 
     let totalPrice = getTextValueById('total-price');
     let grandTotal = getTextValueById('grand-total');
     totalPrice = 0;
     grandTotal = 0;
 
     let bookedSeat = getTextValueById('booked-seats');
-    bookedSeat = 0; */
+    bookedSeat = 0; 
+    */
 }
 
 
