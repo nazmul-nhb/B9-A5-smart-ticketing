@@ -170,6 +170,7 @@ function successNext() {
     phoneField.value = '';
     nameField.value = '';
     emailField.value = '';
+    nextButton.setAttribute('disabled', true);
 }
 
 
