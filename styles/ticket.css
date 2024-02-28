@@ -21,7 +21,12 @@
 }
 
 /* Disabled Bus Seats Buttons */
-.button-p-bg:disabled{
+.button-p-bg:disabled {
     background-color: #1DD100;
+    color: white;
+}
+
+.button-pa-bg:disabled {
+    background-color: #d77272;
     color: white;
 }

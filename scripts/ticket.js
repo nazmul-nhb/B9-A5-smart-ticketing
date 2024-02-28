@@ -6,6 +6,10 @@ function jumpToReference() {
     }
 }
 
+const couponInput = document.getElementById('coupon');
+const phoneField = document.getElementById('phone');
+const nameField = document.getElementById('name');
+const emailField = document.getElementById('email');
 // Events while Clicking on Seat Numbers
 function seatNumberClicked(event) {
     const seatNumberElement = event.target;
@@ -48,9 +52,15 @@ function seatNumberClicked(event) {
     setTextValueById('grand-total', totalPrice);
 
     // Enable Coupon Input Field
-    const couponInput = document.getElementById('coupon');
     if (bookedSeat === 4) {
         couponInput.removeAttribute('disabled');
+    }
+
+    // Enable Name, Phone & Email Fields
+    if (bookedSeat >= 1) {
+        phoneField.removeAttribute('disabled');
+        nameField.removeAttribute('disabled');
+        emailField.removeAttribute('disabled');
     }
 }
 
@@ -82,12 +92,15 @@ couponField.addEventListener('keyup', function (event) {
     }
 });
 
+const bookingDetails = document.getElementById('booked-seats-details');
+const discountAmount = document.getElementById('discount-amount');
+const couponDiv = document.getElementById('coupon-div');
+
 // Calculating Grand Total and Showing Alerts
 function grandTotalCoupon() {
     let totalPrice = getTextValueById('total-price');
     let grandTotal = getTextValueById('grand-total');
     const couponText = getInputStringById('coupon');
-    const couponDiv = document.getElementById('coupon-div');
 
     if (couponText === 'NEW15') {
         grandTotal = totalPrice - (totalPrice * 15) / 100;
@@ -140,32 +153,52 @@ phoneNumber.addEventListener('keyup', function (event) {
     }
 });
 
-// Function for Next Button
+// Function for Next Button Reset
 function successNext() {
-    const phoneField = document.getElementById('phone');
-    const nameField = document.getElementById('name');
-    const emailField = document.getElementById('email');
     phoneField.value = '';
     nameField.value = '';
     emailField.value = '';
     nextButton.setAttribute('disabled', true);
+    phoneField.setAttribute('disabled', true);
+    nameField.setAttribute('disabled', true);
+    emailField.setAttribute('disabled', true);
 
-    // Resetting Booking Extra
-/*    
+    // Resetting Booking Related Things [[Extra]]
+
     for (let button of buttons) {
+        if (button.hasAttribute('disabled') && !button.classList.contains('button-pa-bg')) {
+            button.removeAttribute('disabled');
+        }
+
         if (button.classList.contains('button-p-bg')) {
             button.classList.remove('button-p-bg');
+            button.classList.add('button-pa-bg');
+            button.setAttribute('disabled', true);
+            couponField.setAttribute('disabled', true);
+            nextButton.setAttribute('disabled', true);
+            phoneField.setAttribute('disabled', true);
+            nameField.setAttribute('disabled', true);
+            emailField.setAttribute('disabled', true);
         }
     }
- 
-    let totalPrice = getTextValueById('total-price');
-    let grandTotal = getTextValueById('grand-total');
-    totalPrice = 0;
-    grandTotal = 0;
 
-    let bookedSeat = getTextValueById('booked-seats');
-    bookedSeat = 0; 
-    */
+    let bookedSeat = document.getElementById('booked-seats');
+    bookedSeat.innerText = 0;
+
+    bookingDetails.innerHTML = '';
+    discountAmount.innerHTML = '';
+
+    let totalPrice = document.getElementById('total-price');
+    let grandTotal = document.getElementById('grand-total');
+    totalPrice.innerText = 0;
+    grandTotal.innerText = 0;
+
+    if (couponDiv.classList.contains('hidden')) {
+        couponDiv.classList.remove('hidden');
+        couponField.value = '';
+        couponField.setAttribute('disabled', true);
+        couponApply.setAttribute('disabled', true);
+    }
 }
 
 
